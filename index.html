@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ملخص أصول الفقه الذي لا يسع الفقيه جهله (ص 5 – 37)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;400;600;700;800&family=Reem+Kufi:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============ المتغيرات العامة ============ */
+:root{
+  --green-950:#06281e;
+  --green-900:#0b3d2e;
+  --green-800:#0f5132;
+  --green-700:#14684a;
+  --green-600:#1a7f5b;
+  --green-100:#e3efe8;
+  --gold:#c9a227;
+  --gold-light:#e8cf7a;
+  --gold-dark:#9c7c15;
+  --cream:#faf6ee;
+  --card:#ffffff;
+  --text:#22302a;
+  --muted:#5f6f66;
+  --border:#e6e0d2;
+  --shadow:0 6px 24px rgba(11,61,46,.08);
+  --shadow-lg:0 14px 40px rgba(11,61,46,.14);
+  --radius:16px;
+}
+body.dark{
+  --green-100:#10312640;
+  --cream:#0d1512;
+  --card:#14211c;
+  --text:#e8ede9;
+  --muted:#9db3a8;
+  --border:#233930;
+  --shadow:0 6px 24px rgba(0,0,0,.35);
+  --shadow-lg:0 14px 40px rgba(0,0,0,.5);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Cairo',sans-serif;
+  background:var(--cream);
+  color:var(--text);
+  line-height:1.9;
+  transition:background .4s,color .4s;
+}
+::selection{background:var(--gold);color:var(--green-950)}
+
+/* ============ شريط تقدم القراءة ============ */
+#progress{position:fixed;top:0;right:0;height:4px;width:0;
+  background:linear-gradient(90deg,var(--gold),var(--gold-light));
+  z-index:1000;transition:width .1s linear}
+
+/* ============ شريط التنقل ============ */
+nav{
+  position:sticky;top:0;z-index:900;
+  background:color-mix(in srgb,var(--green-900) 96%,transparent);
+  backdrop-filter:blur(10px);
+  display:flex;align-items:center;gap:6px;
+  padding:0 20px;height:60px;
+  box-shadow:0 2px 14px rgba(0,0,0,.25);
+}
+nav .brand{font-family:'Reem Kufi',sans-serif;color:var(--gold-light);
+  font-weight:700;font-size:1.05rem;margin-left:auto;white-space:nowrap}
+nav .links{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+nav .links::-webkit-scrollbar{display:none}
+nav a{
+  color:#dfe9e3;text-decoration:none;font-size:.85rem;font-weight:600;
+  padding:8px 13px;border-radius:99px;white-space:nowrap;transition:.25s;
+}
+nav a:hover{background:rgba(255,255,255,.12);color:#fff}
+nav a.active{background:var(--gold);color:var(--green-950)}
+#themeBtn{
+  background:transparent;border:1.5px solid var(--gold);color:var(--gold-light);
+  width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:1rem;
+  display:grid;place-items:center;transition:.3s;flex-shrink:0;margin-right:8px;
+}
+#themeBtn:hover{background:var(--gold);color:var(--green-950);transform:rotate(20deg)}
+
+/* ============ الترويسة ============ */
+header{
+  position:relative;color:#fff;text-align:center;
+  padding:90px 20px 110px;overflow:hidden;
+  background:
+    linear-gradient(160deg,rgba(6,40,30,.96),rgba(15,81,50,.93)),
+    url("data:image/svg+xml,%3Csvg width='70' height='70' viewBox='0 0 70 70' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M35 4l8 23 23 8-23 8-8 23-8-23-23-8 23-8z' fill='%23ffffff' fill-opacity='0.06'/%3E%3C/svg%3E");
+  background-color:var(--green-900);
+}
+header::after{
+  content:"";position:absolute;bottom:-2px;right:0;left:0;height:70px;
+  background:var(--cream);
+  clip-path:ellipse(75% 100% at 50% 100%);
+}
+.bismillah{font-family:'Amiri',serif;font-size:1.6rem;color:var(--gold-light);margin-bottom:18px}
+header h1{
+  font-family:'Reem Kufi',sans-serif;font-size:clamp(1.6rem,4.5vw,3rem);
+  font-weight:700;line-height:1.6;max-width:850px;margin:0 auto 14px;
+}
+header h1 span{color:var(--gold-light)}
+header .author{font-size:1.1rem;color:#cfe0d6;margin-bottom:8px}
+header .range{
+  display:inline-block;margin-top:14px;padding:8px 26px;border-radius:99px;
+  border:1.5px solid var(--gold);color:var(--gold-light);font-weight:700;font-size:.95rem;
+}
+.stats{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:34px;position:relative;z-index:2}
+.stat{
+  background:rgba(255,255,255,.08);border:1px solid rgba(232,207,122,.35);
+  border-radius:14px;padding:14px 26px;min-width:130px;
+}
+.stat b{display:block;font-size:1.7rem;color:var(--gold-light);font-family:'Reem Kufi',sans-serif}
+.stat small{color:#d7e4dc;font-size:.82rem}
+
+/* ============ هيكل عام ============ */
+main{max-width:1100px;margin:0 auto;padding:20px 20px 60px}
+section{margin-top:70px;scroll-margin-top:80px}
+.sec-head{text-align:center;margin-bottom:36px}
+.sec-head .orn{color:var(--gold);font-size:1.3rem;letter-spacing:8px}
+.sec-head h2{
+  font-family:'Reem Kufi',sans-serif;font-size:clamp(1.4rem,3.4vw,2.1rem);
+  color:var(--green-800);margin:6px 0;
+}
+body.dark .sec-head h2{color:var(--gold-light)}
+.sec-head .sub{color:var(--muted);font-size:.95rem}
+.sec-head .line{
+  width:120px;height:3px;margin:14px auto 0;border-radius:3px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+}
+
+/* ============ البطاقات ============ */
+.card{
+  background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+  box-shadow:var(--shadow);padding:26px;transition:.35s;
+}
+.card:hover{box-shadow:var(--shadow-lg)}
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+
+/* ============ فهرس المحتويات ============ */
+.toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+.toc a{
+  display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--text);
+  background:var(--card);border:1px solid var(--border);border-radius:14px;
+  padding:16px 18px;font-weight:700;font-size:.95rem;transition:.3s;
+}
+.toc a:hover{transform:translateY(-4px);border-color:var(--gold);box-shadow:var(--shadow)}
+.toc .num{
+  width:40px;height:40px;border-radius:12px;flex-shrink:0;display:grid;place-items:center;
+  background:var(--green-800);color:var(--gold-light);font-family:'Reem Kufi',sans-serif;
+}
+
+/* ============ عناصر المنهج ============ */
+.item{display:flex;gap:16px;background:var(--card);border:1px solid var(--border);
+  border-radius:var(--radius);padding:22px;transition:.3s}
+.item:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:var(--shadow)}
+.item .no{
+  width:46px;height:46px;border-radius:50%;flex-shrink:0;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--green-700),var(--green-900));
+  color:var(--gold-light);font-family:'Reem Kufi',sans-serif;font-size:1.15rem;
+  box-shadow:0 4px 12px rgba(15,81,50,.3);
+}
+.item h4{color:var(--green-700);margin-bottom:4px;font-size:1.02rem}
+body.dark .item h4{color:var(--gold-light)}
+.item p{font-size:.9rem;color:var(--muted)}
+
+/* أبواب الكتاب */
+.books{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:22px}
+.book-chip{
+  background:var(--card);border:1px solid var(--border);border-radius:12px;
+  padding:12px 18px;font-size:.9rem;font-weight:700;transition:.3s;cursor:default;
+}
+.book-chip b{color:var(--gold-dark);display:block;font-size:.75rem}
+body.dark .book-chip b{color:var(--gold-light)}
+.book-chip:hover{border-color:var(--gold);transform:scale(1.05)}
+.book-chip.main{background:var(--green-800);color:#fff;border-color:var(--green-800)}
+.book-chip.main b{color:var(--gold-light)}
+
+/* ============ الخط الزمني ============ */
+.timeline{position:relative;padding:10px 0}
+.timeline::before{
+  content:"";position:absolute;top:0;bottom:0;right:26px;width:3px;
+  background:linear-gradient(180deg,var(--gold),var(--green-700),var(--gold));
+  border-radius:3px;
+}
+.t-item{position:relative;padding-right:70px;margin-bottom:34px}
+.t-item .dot{
+  position:absolute;right:13px;top:6px;width:30px;height:30px;border-radius:50%;
+  background:var(--card);border:3px solid var(--gold);display:grid;place-items:center;
+  font-size:.7rem;font-weight:800;color:var(--gold-dark);z-index:2;
+}
+body.dark .t-item .dot{color:var(--gold-light)}
+.t-item .era{
+  font-family:'Reem Kufi',sans-serif;color:var(--green-700);font-size:1.15rem;
+  margin-bottom:6px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+}
+body.dark .t-item .era{color:var(--gold-light)}
+.t-item .era .tag{
+  font-family:'Cairo';font-size:.72rem;background:var(--gold);color:var(--green-950);
+  border-radius:99px;padding:2px 12px;font-weight:700;
+}
+.t-item ul{margin:8px 18px 0;list-style:none}
+.t-item li{position:relative;padding-right:20px;font-size:.92rem;color:var(--muted);margin-bottom:4px}
+.t-item li::before{content:"✦";position:absolute;right:0;color:var(--gold);font-size:.75rem;top:2px}
+.t-item .ex{
+  margin-top:10px;background:var(--green-100);border-right:3px solid var(--green-600);
+  border-radius:10px;padding:12px 16px;font-size:.88rem;
+}
+.t-item .ex b{color:var(--green-700)}
+body.dark .t-item .ex b{color:var(--gold-light)}
+
+/* ============ صندوق الآية / النص الشرعي ============ */
+.quran{
+  font-family:'Amiri',serif;font-size:1.15rem;color:var(--gold-dark);
+  background:color-mix(in srgb,var(--gold-light) 14%,var(--card));
+  border:1px dashed var(--gold);border-radius:12px;padding:10px 16px;
+  display:inline-block;margin:6px 0;
+}
+body.dark .quran{color:var(--gold-light)}
+
+/* ============ بطاقات التعريف ============ */
+.def-card{border-top:4px solid var(--gold);position:relative;overflow:hidden}
+.def-card .label{
+  display:inline-block;background:var(--green-800);color:var(--gold-light);
+  font-family:'Reem Kufi';padding:4px 18px;border-radius:0 0 12px 12px;
+  margin:-26px 0 12px -26px;font-size:.9rem;
+}
+.def-card .txt{font-family:'Amiri',serif;font-size:1.25rem;line-height:2.2;color:var(--text)}
+.def-card .txt em{color:var(--gold-dark);font-style:normal;font-weight:700}
+body.dark .def-card .txt em{color:var(--gold-light)}
+
+/* قيود التعريف — أكورديون */
+.acc{border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--card);margin-bottom:12px}
+.acc-head{
+  width:100%;background:none;border:none;cursor:pointer;text-align:right;
+  display:flex;align-items:center;gap:12px;padding:16px 18px;
+  font-family:'Cairo';font-weight:700;font-size:.98rem;color:var(--text);transition:.25s;
+}
+.acc-head:hover{background:var(--green-100)}
+.acc-head .badge{
+  width:30px;height:30px;border-radius:9px;flex-shrink:0;display:grid;place-items:center;
+  background:var(--gold);color:var(--green-950);font-size:.85rem;
+}
+.acc-head .arrow{margin-right:auto;transition:.35s;color:var(--gold-dark)}
+.acc.open .acc-head .arrow{transform:rotate(180deg)}
+.acc-body{max-height:0;overflow:hidden;transition:max-height .45s ease}
+.acc-body-in{padding:4px 20px 18px;font-size:.92rem;color:var(--muted)}
+.acc-body-in ul{margin-right:16px}
+.acc-body-in li{margin-bottom:6px}
+.acc-body-in b{color:var(--green-700)}
+body.dark .acc-body-in b{color:var(--gold-light)}
+
+/* بطاقات قلب — معاني الأصل */
+.flip-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px}
+.flip{perspective:1000px;height:210px;cursor:pointer}
+.flip-in{position:relative;width:100%;height:100%;transition:transform .7s;transform-style:preserve-3d}
+.flip.flipped .flip-in{transform:rotateY(180deg)}
+.flip-face{
+  position:absolute;inset:0;backface-visibility:hidden;border-radius:var(--radius);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:18px;text-align:center;gap:8px;
+}
+.flip-front{background:linear-gradient(150deg,var(--green-800),var(--green-950));color:#fff;
+  border:1px solid var(--gold)}
+.flip-front .n{font-family:'Reem Kufi';font-size:1.6rem;color:var(--gold-light)}
+.flip-front .t{font-family:'Reem Kufi';font-size:1.2rem}
+.flip-front small{color:#b9cfc3;font-size:.72rem}
+.flip-back{background:var(--card);border:1.5px solid var(--gold);transform:rotateY(180deg);
+  font-size:.83rem;color:var(--muted)}
+.flip-back b{color:var(--green-700);font-size:.95rem}
+body.dark .flip-back b{color:var(--gold-light)}
+
+/* ============ التبويبات ============ */
+.tabs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:26px}
+.tab-btn{
+  border:1.5px solid var(--green-700);background:transparent;color:var(--green-700);
+  font-family:'Cairo';font-weight:700;font-size:.9rem;padding:9px 24px;border-radius:99px;
+  cursor:pointer;transition:.3s;
+}
+body.dark .tab-btn{color:var(--gold-light);border-color:var(--gold)}
+.tab-btn.active,.tab-btn:hover{background:var(--green-800);color:var(--gold-light);border-color:var(--green-800)}
+.tab-pane{display:none;animation:fadeIn .5s}
+.tab-pane.show{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+/* ============ المواجهة (أصوليون × فقهاء) ============ */
+.vs{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:stretch}
+.vs .side{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;text-align:center}
+.vs .side h4{font-family:'Reem Kufi';color:var(--green-700);font-size:1.1rem;margin-bottom:10px}
+body.dark .vs .side h4{color:var(--gold-light)}
+.vs .side .q{font-family:'Amiri',serif;font-size:1.1rem;line-height:2.1}
+.vs .mid{display:grid;place-items:center}
+.vs .mid span{
+  width:52px;height:52px;border-radius:50%;background:var(--gold);color:var(--green-950);
+  display:grid;place-items:center;font-family:'Reem Kufi';font-weight:700;font-size:.9rem;
+  box-shadow:0 6px 18px rgba(201,162,39,.4);
+}
+.vs-note{margin-top:16px;background:var(--green-100);border-radius:12px;padding:16px 20px;font-size:.92rem}
+.vs-note b{color:var(--green-700)}
+body.dark .vs-note b{color:var(--gold-light)}
+@media(max-width:760px){.vs{grid-template-columns:1fr}.vs .mid span{margin:0 auto}}
+
+/* ============ الجدول ============ */
+.tbl-wrap{overflow-x:auto;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--border)}
+table{width:100%;border-collapse:collapse;background:var(--card);min-width:640px}
+th{background:var(--green-800);color:var(--gold-light);font-family:'Reem Kufi';
+  padding:14px 16px;font-size:.95rem;font-weight:600}
+td{padding:14px 16px;border-top:1px solid var(--border);font-size:.9rem;vertical-align:top}
+tr:hover td{background:var(--green-100)}
+td .pill{display:inline-block;background:var(--gold);color:var(--green-950);font-size:.72rem;
+  font-weight:800;border-radius:99px;padding:2px 12px}
+td .pill.gray{background:var(--border);color:var(--muted)}
+td .q{font-family:'Amiri',serif;color:var(--gold-dark);font-size:1.02rem}
+body.dark td .q{color:var(--gold-light)}
+
+/* ============ تنبيه / اقتباس ============ */
+.callout{
+  border-radius:var(--radius);padding:22px 24px;display:flex;gap:16px;align-items:flex-start;
+  background:linear-gradient(135deg,var(--green-800),var(--green-950));color:#e8efe9;
+  box-shadow:var(--shadow);
+}
+.callout .ic{font-size:1.6rem;flex-shrink:0}
+.callout b{color:var(--gold-light)}
+
+/* ============ الاختبار ============ */
+.quiz-box{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+  box-shadow:var(--shadow);padding:30px;max-width:720px;margin:0 auto}
+.quiz-q{font-weight:800;font-size:1.05rem;margin-bottom:16px;color:var(--green-800)}
+body.dark .quiz-q{color:var(--gold-light)}
+.quiz-opts{display:grid;gap:10px}
+.quiz-opt{
+  text-align:right;border:1.5px solid var(--border);background:var(--cream);
+  border-radius:12px;padding:12px 16px;cursor:pointer;font-family:'Cairo';font-size:.92rem;
+  color:var(--text);transition:.25s;font-weight:600;
+}
+.quiz-opt:hover:not(:disabled){border-color:var(--gold);transform:translateX(-4px)}
+.quiz-opt.correct{background:#1d7a4f;color:#fff;border-color:#1d7a4f}
+.quiz-opt.wrong{background:#b23a3a;color:#fff;border-color:#b23a3a}
+.quiz-foot{display:flex;justify-content:space-between;align-items:center;margin-top:20px;gap:10px;flex-wrap:wrap}
+.quiz-progress{height:8px;background:var(--border);border-radius:99px;overflow:hidden;flex:1;min-width:120px}
+.quiz-progress span{display:block;height:100%;width:0;background:var(--gold);transition:.4s}
+.btn{
+  background:var(--green-800);color:var(--gold-light);border:none;border-radius:99px;
+  padding:10px 28px;font-family:'Cairo';font-weight:700;font-size:.95rem;cursor:pointer;transition:.3s;
+}
+.btn:hover{background:var(--gold);color:var(--green-950);transform:translateY(-2px)}
+.quiz-result{text-align:center;display:none}
+.quiz-result .score{font-family:'Reem Kufi';font-size:3rem;color:var(--gold-dark)}
+body.dark .quiz-result .score{color:var(--gold-light)}
+
+/* ============ تذييل وزر الصعود ============ */
+footer{
+  margin-top:80px;background:var(--green-950);color:#c9d8cf;text-align:center;padding:36px 20px;
+  background-image:url("data:image/svg+xml,%3Csvg width='70' height='70' viewBox='0 0 70 70' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M35 4l8 23 23 8-23 8-8 23-8-23-23-8 23-8z' fill='%23ffffff' fill-opacity='0.03'/%3E%3C/svg%3E");
+}
+footer .f-title{font-family:'Reem Kufi';color:var(--gold-light);font-size:1.2rem;margin-bottom:6px}
+footer small{opacity:.75}
+#toTop{
+  position:fixed;bottom:26px;left:26px;width:48px;height:48px;border-radius:50%;
+  background:var(--gold);color:var(--green-950);border:none;font-size:1.2rem;cursor:pointer;
+  opacity:0;pointer-events:none;transition:.35s;z-index:800;box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+#toTop.show{opacity:1;pointer-events:auto}
+#toTop:hover{transform:translateY(-4px)}
+
+/* ============ ظهور عند التمرير ============ */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+
+@media(max-width:640px){
+  header{padding:60px 16px 90px}
+  .item,.card{padding:18px}
+  nav .brand{display:none}
+}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<!-- شريط التنقل -->
+<nav>
+  <span class="brand">أصول الفقه ✦ الملخص</span>
+  <div class="links">
+    <a href="#intro" class="active">المقدمة</a>
+    <a href="#history">النشأة والتطور</a>
+    <a href="#definition">التعريف</a>
+    <a href="#topic">الموضوع والفوائد</a>
+    <a href="#hukm">الحكم الشرعي</a>
+    <a href="#quiz">اختبر نفسك</a>
+  </div>
+  <button id="themeBtn" title="الوضع الليلي">☾</button>
+</nav>
+
+<!-- الترويسة -->
+<header id="top">
+  <div class="bismillah">﷽</div>
+  <h1>ملخص كتاب <span>«أصول الفقه الذي لا يسع الفقيه جهله»</span></h1>
+  <div class="author">تأليف: أ. د. عياض بن نامي السلمي</div>
+  <div class="range">تلخيص شامل وميسّر — من صفحة ٥ إلى ٣٧</div>
+  <div class="stats">
+    <div class="stat"><b>٥</b><small>مباحث رئيسة</small></div>
+    <div class="stat"><b>٧</b><small>مراحل تاريخية</small></div>
+    <div class="stat"><b>٦</b><small>أبواب للكتاب</small></div>
+    <div class="stat"><b>٧</b><small>أحكام تكليفية عند الحنفية</small></div>
+  </div>
+</header>
+
+<main>
+
+<!-- فهرس المحتويات -->
+<section class="reveal">
+  <div class="toc">
+    <a href="#intro"><span class="num">١</span> مقدمة المؤلف وخطة الكتاب</a>
+    <a href="#history"><span class="num">٢</span> نشأة أصول الفقه وتطوره</a>
+    <a href="#definition"><span class="num">٣</span> تعريف أصول الفقه</a>
+    <a href="#topic"><span class="num">٤</span> الموضوع والفوائد والاستمداد</a>
+    <a href="#hukm"><span class="num">٥</span> الباب الأول: الحكم الشرعي</a>
+    <a href="#quiz"><span class="num">✎</span> اختبر نفسك</a>
+  </div>
+</section>
+
+<!-- ==================== أولاً: المقدمة وخطة الكتاب ==================== -->
+<section id="intro" class="reveal">
+  <div class="sec-head">
+    <div class="orn">✦ ✦ ✦</div>
+    <h2>أولاً — مقدمة المؤلف وخطة الكتاب</h2>
+    <div class="sub">ص ٥ – ٦</div>
+    <div class="line"></div>
+  </div>
+
+  <p style="text-align:center;max-width:800px;margin:0 auto 30px;color:var(--muted)">
+    وضع المؤلف هذا الكتاب استجابةً لطلب طالب العلم في تأليف كتاب متوسط الحجم يجمع المسائل الأصولية الأساسية
+    التي لا يستغني عنها الفقيه، واعتمد فيه منهجاً تعليمياً ميسّراً يقوم على الأسس الآتية:
+  </p>
+
+  <div class="grid g2">
+    <div class="item"><div class="no">١</div><div>
+      <h4>وضوح العبارة وتقريب المفاهيم</h4>
+      <p>استخدام لغة سهلة واضحة، مع الإكثار من ضرب الأمثلة الفقهية التطبيقية التي تظهر ثمرة القاعدة الأصولية.</p>
+    </div></div>
+    <div class="item"><div class="no">٢</div><div>
+      <h4>التركيز على المشهور وترك التطويل</h4>
+      <p>الاكتفاء بالأقوال المشهورة وأقوى أدلتها، وتجنب الإغراق في الخلافات اللفظية أو الآراء النادرة.</p>
+    </div></div>
+    <div class="item"><div class="no">٣</div><div>
+      <h4>تحرير محل النزاع وبيان ثمرة الخلاف</h4>
+      <p>العناية بتصحيح الأوهام الشائعة في نسبة الأقوال للأئمة، وبيان الفروع الفقهية المبنية على الخلاف الأصولي.</p>
+    </div></div>
+    <div class="item"><div class="no">٤</div><div>
+      <h4>الاستقلالية العلمية في الترجيح</h4>
+      <p>قد يخالف المؤلف أكثر الأصوليين في اختيار تعريف أو ترجيح إذا ظهر له رجحانه بالدليل، وتصحيحاً لسوء فهم وقع في النقل.</p>
+    </div></div>
+    <div class="item"><div class="no">٥</div><div>
+      <h4>تخفيف الهوامش والتخريج</h4>
+      <p>الاقصار على عزو الحديث لمن خرّجه في صلب النص، والاكتفاء بالصحيحين أو أحدهما عند وجود الحديث فيهما.</p>
+    </div></div>
+    <div class="item"><div class="no">✦</div><div>
+      <h4>هدف الكتاب</h4>
+      <p>ليشمل مناهج كليات الشريعة وأصول الدين، قسّمه المؤلف إلى تمهيد وستة أبواب مع خاتمة.</p>
+    </div></div>
+  </div>
+
+  <h3 style="text-align:center;font-family:'Reem Kufi';color:var(--green-700);margin-top:38px">📚 هيكل الكتاب الكلية</h3>
+  <div class="books">
+    <div class="book-chip main"><b>التمهيد</b>التعريف بأصول الفقه</div>
+    <div class="book-chip"><b>الباب الأول</b>الحكم الشرعي</div>
+    <div class="book-chip"><b>الباب الثاني</b>أدلة الأحكام الشرعية</div>
+    <div class="book-chip"><b>الباب الثالث</b>دلالة الألفاظ</div>
+    <div class="book-chip"><b>الباب الرابع</b>التعارض وطرق دفعه</div>
+    <div class="book-chip"><b>الباب الخامس</b>الاجتهاد</div>
+    <div class="book-chip"><b>الباب السادس</b>التقليد</div>
+  </div>
+</section>
+
+<!-- ==================== ثانياً: النشأة والتطور ==================== -->
+<section id="history" class="reveal">
+  <div class="sec-head">
+    <div class="orn">✦ ✦ ✦</div>
+    <h2>ثانياً — نشأة علم أصول الفقه وتطوره التاريخي</h2>
+    <div class="sub">ص ٩ – ١٤</div>
+    <div class="line"></div>
+  </div>
+
+  <div class="callout" style="margin-bottom:36px">
+    <div class="ic">💡</div>
+    <div>لم يأخذ علم أصول الفقه شكله النهائي المستقل عن سائر علوم الشريعة إلا في <b>أواخر القرن الثاني الهجري</b>،
+    غير أن قواعده وأدلته (الكتاب والسنة والقياس) كانت موجودة ومعمولاً بها منذ العهد النبوي.</div>
+  </div>
+
+  <div class="timeline">
+
+    <div class="t-item"><div class="dot">١</div>
+      <div class="era">العهد النبوي <span class="tag">مرحلة الوحي</span></div>
+      <div class="card">
+        <p style="font-size:.92rem">كان النبي ﷺ يفتي بالوحي المتلو (القرآن) أو غير المتلو (السنة)، ويجتهد فيما لم ينزل فيه وحي صريح وينتظر بيانه أو إقرار الوحي.</p>
+        <div class="ex"><b>أمثلة الاستدلال:</b>
+          <ul>
+            <li>الاستدلال بعموم آية <span class="quran">﴿فَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍ خَيْرًا يَرَهُ﴾</span> في حكم الصدقة بالحمر الأهلية.</li>
+            <li>العتاب بعموم آية <span class="quran">﴿اسْتَجِيبُوا لِلَّهِ وَلِلرَّسُولِ﴾</span>.</li>
+            <li>اجتهاده ﷺ في فداء أسرى بدر وصلح الحديبية.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="t-item"><div class="dot">٢</div>
+      <div class="era">عهد الصحابة وكبار التابعين <span class="tag">مرحلة الفطرة</span></div>
+      <div class="card">
+        <p style="font-size:.92rem">لم يحتاجوا إلى تدوين قواعد الأصول لفصاحتهم اللغوية وسلامة فطرتهم ومعرفتهم بأسباب النزول ومقاصد التشريع؛ فكانوا يستنبطون ويقيسون بالسليقة.</p>
+        <div class="ex"><b>من ملامحها:</b> اجتهادات الخلفاء الراشدين والصحابة في النوازل، ومشاوراتهم الفقهية، وبداية ظهور الفتوى والتفاضل في العلم في عهد كبار التابعين.</div>
+      </div>
+    </div>
+
+    <div class="t-item"><div class="dot">٣</div>
+      <div class="era">أواخر عهد التابعين <span class="tag">دواعي التدوين</span></div>
+      <div class="card">
+        <ul>
+          <li>تميّزت المدارس الفقهية، وكثر اختلاط العجم بالعرب.</li>
+          <li>ضعف اللسان العربي، وظهر التعصب للمشايخ، ودخل الوضع في الحديث.</li>
+          <li>فظهرت الحاجة إلى قواعد تضبط الاستدلال.</li>
+        </ul>
+        <div class="ex"><b>أبرز المدارس:</b> مدرسة أهل الحديث في المدينة، ومدرسة أهل الرأي في العراق، مع كثرة المناظرات الفقهية بين الاتباع.</div>
+      </div>
+    </div>
+
+    <div class="t-item"><div class="dot">٤</div>
+      <div class="era">أواخر القرن الثاني <span class="tag">التأسيس والتدوين</span></div>
+      <div class="card">
+        <p style="font-size:.92rem">وُضعت قواعد تضبط ما يصلح دليلاً وما لا يصلح، وفهم عمل الفقيه عند تعارض الأدلة.</p>
+        <div class="ex"><b>الإمام الشافعي — أول من دوّن هذا العلم:</b> كتب «الرسالة» (مقدمة كتاب الأم)، وكتب أيضاً: «اختلاف الحديث»، «إبطال الكتاب»، «جماع العلم»، «أحكام القرآن».</div>
+      </div>
+    </div>
+
+    <div class="t-item"><div class="dot">٥</div>
+      <div class="era">القرنان الثالث والرابع <span class="tag">تابع التأليف</span></div>
+      <div class="card">
+        <p style="font-size:.92rem">تتابع العلماء من مختلف المذاهب على تأليف الأصول أو جمع قواعدها المذهبية:</p>
+        <ul>
+          <li><b>أحمد بن حنبل:</b> «طاعة رسول الله ﷺ».</li>
+          <li><b>داود الظاهري:</b> «الإجماع»، «إبطال التقليد»، «الخبر الواحد».</li>
+          <li><b>الحنفية:</b> عيسى بن أبان والكرخي: «الفصول في الأصول».</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="t-item"><div class="dot">٦</div>
+      <div class="era">القرن الخامس <span class="tag">عصر الازدهار والتوسع</span></div>
+      <div class="card">
+        <p style="font-size:.92rem">ظهر العصر الذهبي للتأليف الأصولي؛ حيث جمعت الموسوعات الكبرى مسائل الفن وحُرّرت مع أدلتها:</p>
+        <ul>
+          <li>«المعتمد» للقاضي عبد الجبار، و«العمد» له أيضاً، و«المعتمد» لأبي الحسين البصري.</li>
+          <li>«العدة» لأبي يعلى، و«التمهيد» و«الواضح» لأبي الخطاب وابن عقيل.</li>
+          <li>«المستصفى» و«المنخول» للغزالي، وأصول السرخسي، والبزدوي والجصاص.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="t-item"><div class="dot">٧</div>
+      <div class="era">العصر الحديث وما بعده <span class="tag">التيسير والتجديد</span></div>
+      <div class="card">
+        <p style="font-size:.92rem">ظهور المؤلفات المعاصرة الميسرة لفهم المتون المغلقة، وانتشار المختصرات (للحفظ) والشروح (لفك العبارات).</p>
+        <div class="ex"><b>أكد المؤلف</b> على مشروعية تيسير أصول الفقه لأنه من «علوم الآلة» الموصلة لتفقهه بلغة العصر، مع عدم القطيعة مع كتب التراث.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== ثالثاً: التعريف ==================== -->
+<section id="definition" class="reveal">
+  <div class="sec-head">
+    <div class="orn">✦ ✦ ✦</div>
+    <h2>ثالثاً — تعريف أصول الفقه</h2>
+    <div class="sub">ص ١٤ – ٢١</div>
+    <div class="line"></div>
+  </div>
+
+  <div class="callout" style="margin-bottom:30px">
+    <div class="ic">📌</div>
+    <div>درج العلماء على تعريف «أصول الفقه» باعتبارين: <b>الأول:</b> مركباً إضافياً (من كلمتين: أصول، وفقه)؛
+    <b>والثاني:</b> علماً ولقباً على هذا العلم المخصوص.</div>
+  </div>
+
+  <!-- تعريف الفقه -->
+  <h3 style="font-family:'Reem Kufi';color:var(--green-700);margin-bottom:16px">١ — التعريف الإضافي: تعريف الفقه</h3>
+  <div class="grid g2" style="margin-bottom:26px">
+    <div class="card def-card">
+      <span class="label">الفقه في اللغة</span>
+      <p class="txt">الفهم مطلقاً، أو معرفة باطن الشيء والوصول إلى أعماقه، أو فهم الأشياء الدقيقة؛ ومنه قوله تعالى: <span class="quran">﴿لَكِن لَّا يَفْقَهُونَ تَسْبِيحَهُمْ﴾</span>.</p>
+    </div>
+    <div class="card def-card">
+      <span class="label">الفقه في الاصطلاح</span>
+      <p class="txt">«العلم بالأحكام الشرعية العملية المكتسب من أدلتها التفصيلية».</p>
+    </div>
+  </div>
+
+  <!-- قيود تعريف الفقه -->
+  <h4 style="margin-bottom:12px">🔍 شرح قيود التعريف — ماذا يُخرج كل قيد؟</h4>
+  <div class="acc">
+    <button class="acc-head"><span class="badge">أ</span> قيد «العلم» <span class="arrow">▼</span></button>
+    <div class="acc-body"><div class="acc-body-in">
+      يُخرج التصورات المفردة والذوات التي هي إثبات أمر لآخر أو نفيه عنه (النسبة الخبرية)؛ فالعلم يشمل اليقين والظن الغالب أو مجموع العلم.
+      <br><small style="color:var(--gold-dark)">تنبيه: ردّ المؤلف على الرازي في زعمه أن الفقه معارف مندرجة تحت هدف كلي واحد، لقطعه بأنه مبني على مقدمتين (وجدانية وإجماعية).</small>
+    </div></div>
+  </div>
+  <div class="acc">
+    <button class="acc-head"><span class="badge">ب</span> قيد «الشرعية» <span class="arrow">▼</span></button>
+    <div class="acc-body"><div class="acc-body-in">
+      تُخرج الأحكام العقلية واللغوية والحسية؛ فالمراد الأحكام المأخوذة من الشرع والمتوقفة عليه.
+    </div></div>
+  </div>
+  <div class="acc">
+    <button class="acc-head"><span class="badge">ج</span> قيد «العملية» <span class="arrow">▼</span></button>
+    <div class="acc-body"><div class="acc-body-in">
+      تُخرج الأحكام الاعتقادية (علم التوحيد/الكلام) وإن كانت تُسمى قديماً «الفقه الأكبر»؛ فالمراد المتعلقة بما يصدر من الناس من أعمال كـ(الصلاة والبيع).
+    </div></div>
+  </div>
+  <div class="acc">
+    <button class="acc-head"><span class="badge">د</span> قيد «المكتسب» <span class="arrow">▼</span></button>
+    <div class="acc-body"><div class="acc-body-in">
+      يُخرج:
+      <ul>
+        <li><b>علم الله</b> (الأزلي) وعلم جبريل، وعلم الرسول ﷺ الحاصل بالوحي المباشر (فيدخل اجتهاده ﷺ).</li>
+        <li><b>علم المقلد</b>؛ لأنه لم يُكتسب من الأدلة بل من سؤال المجتهد وتقليده.</li>
+      </ul>
+      والمراد بالمكتسب: الحاصل بالنظر والاجتهاد والاستنباط من الأدلة الجزئية الخاصة (كآية تحريم كالميتة وحديث طهارة الجلد بالدباغ).
+    </div></div>
+  </div>
+
+  <!-- تطور مصطلح الفقيه -->
+  <div class="card" style="margin:26px 0">
+    <h4 style="color:var(--green-700);margin-bottom:10px">🔄 تطور إطلاق اسم «الفقيه»</h4>
+    <ul style="margin-right:18px;font-size:.93rem;color:var(--muted)">
+      <li><b>الاصطلاح الأول:</b> (عرف القرآن والصحابة) لا يُسمى فقيهاً إلا المجتهد الذي يستنبط الأحكام من أدلتها.</li>
+      <li><b>ثم توسع المتأخرون:</b> فأطلقوا اسم «الفقيه» على كل من عرف مسائل الفقه المدونة في الكتب ولو بطريق التقليد.</li>
+    </ul>
+    <div class="vs-note" style="margin-top:14px">
+      <b>إشكال الآمدي:</b> إذا كان الفقه هو العلم بالأحكام، فماذا يُسمى العالم فقيهاً مع أنه لا يعلم جميع الأحكام وقد يتوقف في بعض المسائل؟
+      <br><b>جوابه:</b> المراد بالعلم بالأحكام ليس حضورها جميعاً في الذهن فعلاً، بل علمه بأكثرها، وامتلاكه (الملكة الفقهية) القدرة القريبة على استنباط الباقي عند البحث دون حاجة لتعلم علم جديد.
+    </div>
+  </div>
+
+  <!-- تعريف الأصل -->
+  <h3 style="font-family:'Reem Kufi';color:var(--green-700);margin-bottom:16px">٢ — تعريف «الأصول»</h3>
+  <div class="grid g2" style="margin-bottom:22px">
+    <div class="card def-card"><span class="label">الأصول لغة</span>
+      <p class="txt">جمع «أصل»، وهو ما يُبنى عليه غيره، أو منشأ الشيء.</p></div>
+    <div class="card def-card"><span class="label">الأصول اصطلاحاً</span>
+      <p class="txt">يُطلق لفظ «الأصل» على خمسة معانٍ — <em>اضغط البطاقات أدناه لقلبها</em> 👇</p></div>
+  </div>
+
+  <div class="flip-grid">
+    <div class="flip"><div class="flip-in">
+      <div class="flip-face flip-front"><span class="n">١</span><span class="t">الدليل</span><small>⭐ أقرب المعاني هنا</small></div>
+      <div class="flip-face flip-back"><b>الدليل</b><br>كقولهم: «الأصل في هذه المسألة الكتاب والسنة والإجماع».</div>
+    </div></div>
+    <div class="flip"><div class="flip-in">
+      <div class="flip-face flip-front"><span class="n">٢</span><span class="t">القاعدة المستمرة</span><small>المعنى الثاني المناسب هنا</small></div>
+      <div class="flip-face flip-back"><b>القاعدة المستمرة</b><br>كقولهم: «الأصل تقديم الخاص على العام».</div>
+    </div></div>
+    <div class="flip"><div class="flip-in">
+      <div class="flip-face flip-front"><span class="n">٣</span><span class="t">الراجح</span><small>اضغط للقلب</small></div>
+      <div class="flip-face flip-back"><b>الراجح</b><br>كقولهم: «الأصل بقاء ما كان على ما كان» و«الأصل براءة الذمة».</div>
+    </div></div>
+    <div class="flip"><div class="flip-in">
+      <div class="flip-face flip-front"><span class="n">٤</span><span class="t">مخرج المسألة الفرضية</span><small>اضغط للقلب</small></div>
+      <div class="flip-face flip-back"><b>مخرج المسألة الفرضية</b><br>العدد الذي تخرج منه فروض الإرث (٢، ٣، ٤، ٦، ٨، ١٢، ١٨، ٢٤).</div>
+    </div></div>
+    <div class="flip"><div class="flip-in">
+      <div class="flip-face flip-front"><span class="n">٥</span><span class="t">المقيس عليه</span><small>اضغط للقلب</small></div>
+      <div class="flip-face flip-back"><b>المقيس عليه</b><br>وهو أحد أركان القياس الأربعة: (الأصل، الفرع، العلة، الحكم).</div>
+    </div></div>
+  </div>
+
+  <!-- تعريف أصول الفقه كعلم -->
+  <h3 style="font-family:'Reem Kufi';color:var(--green-700);margin:34px 0 16px">٣ — تعريف «أصول الفقه» علماً</h3>
+  <div class="card def-card" style="margin-bottom:22px">
+    <span class="label">تعريف الفخر الرازي — اختاره المؤلف</span>
+    <p class="txt">«مجموع طرق الفقه الإجمالية، وكيفية الاستفادة منها، وحال المستفيد».</p>
+    <p style="font-size:.85rem;color:var(--muted);margin-top:8px">
+      ✦ استبدال «الطرق» بـ«الأدلة» صحيح على القول بأن الدليل يشمل القطعي والظني.
+      ✦ واستبدال كلمة «كيفية» بـ«صفة» أفصح لغةً.
+    </p>
+  </div>
+
+  <div class="grid g3">
+    <div class="card"><h4 style="color:var(--gold-dark)">① طرق الفقه الإجمالية</h4>
+      <p style="font-size:.88rem;color:var(--muted)">الأدلة الكلية والقواعد العامة التي لا تختص بمسألة واحدة: كالإجماع والقياس والاستحسان وشروطها ومراتبها وعوارضها كالنسخ والتعارض — بخلاف الأدلة التفصيلية الجزئية.</p></div>
+    <div class="card"><h4 style="color:var(--gold-dark)">② كيفية (صفة) الاستفادة</h4>
+      <p style="font-size:.88rem;color:var(--muted)">طرق الدلالة اللفظية والعقلية لاستخراج الأحكام: كمعرفة دلالات العام والخاص، والمطلق والمقيد، والأمر والنهي، والمنطوق والمفهوم، وطرق معرفة العلة في القياس.</p></div>
+    <div class="card"><h4 style="color:var(--gold-dark)">③ حال المستفيد</h4>
+      <p style="font-size:.88rem;color:var(--muted)">صنفان: المجتهد (يستفيد الحكم من الدليل مباشرة) والمقلد (يستفيد الحكم بالسؤال)؛ فيدخل فيه شروط الاجتهاد وأحكامه، وأحكام التقليد والاستفتاء.</p></div>
+  </div>
+
+  <div class="callout" style="margin-top:22px">
+    <div class="ic">🎓</div>
+    <div><b>الأصولي:</b> هو من عرف طرق الفقه الإجمالية وصفة الاستفادة منها وحال المستفيد، وحصلت له الملكة في هذا العلم.</div>
+  </div>
+</section>
+
+<!-- ==================== رابعاً: الموضوع والفوائد والاستمداد ==================== -->
+<section id="topic" class="reveal">
+  <div class="sec-head">
+    <div class="orn">✦ ✦ ✦</div>
+    <h2>رابعاً — موضوع أصول الفقه وفوائده واستمداده</h2>
+    <div class="sub">ص ٢٢ – ٢٧</div>
+    <div class="line"></div>
+  </div>
+
+  <h3 style="font-family:'Reem Kufi';color:var(--green-700);margin-bottom:16px">🎯 موضوع العلم (ثلاثة محاور)</h3>
+  <div class="grid g3" style="margin-bottom:36px">
+    <div class="card" style="text-align:center"><div style="font-size:2rem">📜</div>
+      <h4>١ — طرق الفقه الإجمالية</h4><p style="font-size:.87rem;color:var(--muted)">وحجيتها (قطعية كانت أو ظنية).</p></div>
+    <div class="card" style="text-align:center"><div style="font-size:2rem">🧭</div>
+      <h4>٢ — صفة الاستفادة منها</h4><p style="font-size:.87rem;color:var(--muted)">طرق الدلالات والاستنباط.</p></div>
+    <div class="card" style="text-align:center"><div style="font-size:2rem">⚖️</div>
+      <h4>٣ — صفة المجتهد والمقلد</h4><p style="font-size:.87rem;color:var(--muted)">والترجيح عند التعارض.</p></div>
+  </div>
+
+  <h3 style="font-family:'Reem Kufi';color:var(--green-700);margin-bottom:16px">✨ فوائد علم أصول الفقه</h3>
+  <div class="grid g2" style="margin-bottom:26px">
+    <div class="item"><div class="no">١</div><div><h4>الفقه في الدين والترجيح بين المذاهب</h4>
+      <p>كثرة المؤلفات واختلاف أقوال العلماء تدعو الطالب للدراسة؛ فالأصول هي الميزان العادل والمحك الذي يميز القول الراجح الأقرب للدليل. (وبه يردّ على زعم الاستغناء بكتب الفقه المدون).</p></div></div>
+    <div class="item"><div class="no">٢</div><div><h4>معرفة الحكم الشرعي للنوازل والمستجدات</h4>
+      <p>تمكين المجامع الفقهية والعلماء من استنباط أحكام القضايا الحديثة: كالتلقيح الصناعي، وأطفال الأنابيب، وتجميد الأجنة، ونقل الأعضاء، وعقود الإنترنت، والبرامج المحاسبية.</p></div></div>
+    <div class="item"><div class="no">٣</div><div><h4>معرفة حكم الشريعة ومقاصدها</h4>
+      <p>التأمل في علل الأحكام ومقاصدها (الضرورية والحاجية والتحسينية)، وترتيب الواجبات، وتقديم الأقوى دليلاً والأكثر نفعاً عند تزاحم المصالح.</p></div></div>
+    <div class="item"><div class="no">٤</div><div><h4>مواجهة خصوم الشريعة الإسلامية</h4>
+      <p>دحض شبهة عدم صلاحية الشريعة للعصر الحديث، بإثبات قدرتها عبر القياس والتخريج وقواعد الاستنباط على استيعاب حاجات البشر المتجددة.</p></div></div>
+    <div class="item"><div class="no">٥</div><div><h4>حماية الفقيه من التناقض</h4>
+      <p>صيانة المفتي من اضطراب الفتوى بالتفريق بين المتماثلات أو التسوية بين المختلفات، مما يعزز الثقة بالشريعة.</p></div></div>
+    <div class="callout" style="display:flex"><div class="ic">⚠️</div><div>
+      <b>تنبيه مهم:</b> فائدة أصول الفقه لا تقتصر على الفقيه؛ بل لا يستغني عنه المفسر والمحدث والمتكلم والباحث في العقائد؛ لأنه قانون الفهم الصحيح لنصوص الوحي ودفع ظاهر التعارض. ولهذا سمّى الغزالي والرازي والبيضاوي والشوكاني كتبهم بـ«أصول العلم» دون تقييدها بالفقه.</div></div>
+  </div>
+
+  <h3 style="font-family:'Reem Kufi';color:var(--green-700);margin-bottom:16px">🏛️ استمداد أصول الفقه (مصادره الأربعة)</h3>
+  <div class="grid g4">
+    <div class="card" style="text-align:center;border-top:4px solid var(--gold)"><div style="font-size:1.9rem">📖</div>
+      <h4 style="font-size:.95rem">١ — القرآن والسنة</h4>
+      <p style="font-size:.82rem;color:var(--muted)">هما أساس العلوم الشرعية كلها، وإليهما ترجع حجية جميع الأدلة كأدلة الإجماع والقياس، ومنها غالب القواعد الأصولية.</p></div>
+    <div class="card" style="text-align:center;border-top:4px solid var(--gold)"><div style="font-size:1.9rem">☪️</div>
+      <h4 style="font-size:.95rem">٢ — علم أصول الدين</h4>
+      <p style="font-size:.82rem;color:var(--muted)">لأن الاستدلال بالأدلة الشرعية متوقف على معرفة الله تعالى وصفاته والإيمان بصدق رسوله ﷺ فيما بلّغ عن ربه.</p></div>
+    <div class="card" style="text-align:center;border-top:4px solid var(--gold)"><div style="font-size:1.9rem">🗣️</div>
+      <h4 style="font-size:.95rem">٣ — اللغة العربية</h4>
+      <p style="font-size:.82rem;color:var(--muted)">لأن القرآن والسنة نزلا بلغة العرب، ففهم دلالات الألفاظ متوقف على معرفتها، إلا إن ثبت عرف خاص للشرع فيُقدَّم (كالحقيقة الشرعية).</p></div>
+    <div class="card" style="text-align:center;border-top:4px solid var(--gold)"><div style="font-size:1.9rem">⚖️</div>
+      <h4 style="font-size:.95rem">٤ — الفقه</h4>
+      <p style="font-size:.82rem;color:var(--muted)">يحتاجه الأصولي لضرب الأمثال التي توضح القواعد. ولا يرد إشكال الدور؛ لأن المستمد في الأصول مجرد تصور المعنى الكلي، أما الفقه فإثبات الأحكام في المسائل الآحاد.</p></div>
+  </div>
+</section>
+
+<!-- ==================== خامساً: الحكم الشرعي ==================== -->
+<section id="hukm" class="reveal">
+  <div class="sec-head">
+    <div class="orn">✦ ✦ ✦</div>
+    <h2>خامساً — الباب الأول: الحكم الشرعي</h2>
+    <div class="sub">تعريفه وأقسامه — ص ٢٩ – ٣٧</div>
+    <div class="line"></div>
+  </div>
+
+  <div class="grid g2" style="margin-bottom:30px">
+    <div class="card def-card"><span class="label">الحكم لغة</span>
+      <p class="txt">المنع؛ ومنه سُميت حديدة اللجام «حَكَمَة الدابة» لأنها تمنع مخالفة صاحبها، ويُطلق بمعنى القضاء لأنه يمنع ضياع الحقوق.</p></div>
+    <div class="card def-card"><span class="label">الحكم اصطلاحاً</span>
+      <p class="txt">تعدد التعريف بين الأصوليين والفقهاء — انظر المواجهة أدناه 👇</p></div>
+  </div>
+
+  <!-- مواجهة التعريفين -->
+  <div class="vs reveal">
+    <div class="side">
+      <h4>🏛️ تعريف جمهور الأصوليين</h4>
+      <p class="q">«خطاب الله المتعلق بأفعال المكلفين بالاقتضاء أو التخيير أو الوضع»</p>
+      <small style="color:var(--muted)">الحكم = نفس الخطاب الصادر من الله</small>
+    </div>
+    <div class="mid"><span>مقابل</span></div>
+    <div class="side">
+      <h4>📿 تعريف الفقهاء</h4>
+      <p class="q">«مقتضى خطاب الله (أو دلالته) المتعلق بأفعال المكلفين...»</p>
+      <small style="color:var(--muted)">الحكم = الأثر المترتب على الخطاب</small>
+    </div>
+  </div>
+  <div class="vs-note">
+    <b>سر الاختلاف:</b> الأصوليون ينظرون إلى النص الشرعي نفسه فجعلوا الحكم هو خطاب الله (ولذلك يقسمونه إلى: إيجاب، ندب، تحريم، كراهة، إباحة)،
+    بينما الفقهاء ينظرون إلى فعل العبد ووصفه فجعلوا الحكم الأثر المترتب عليه (ولذلك يقسمونه إلى: واجب، مندوب، محرم، مكروه، مباح).
+  </div>
+
+  <!-- شرح القيود -->
+  <h3 style="font-family:'Reem Kufi';color:var(--green-700);margin:38px 0 14px">🔍 شرح قيود التعريف</h3>
+
+  <div class="acc">
+    <button class="acc-head"><span class="badge">١</span> قولهم: «خطاب الله» <span class="arrow">▼</span></button>
+    <div class="acc-body"><div class="acc-body-in">
+      يدخل فيه القرآن الكريم والسنة النبوية، ويشمل أمره ونهيه وخبره وتوجيه الكلام نحو غيره لإفهامه.
+      والمراد بكلام الله اللفظ المسموع المقروء ومعناه؛ وسائر الأدلة الشرعية والإجماع والقياس يدل عليه لأنها كاشفة عنه.
+    </div></div>
+  </div>
+
+  <div class="acc">
+    <button class="acc-head"><span class="badge">٢</span> قولهم: «المتعلق بأفعال المكلفين» <span class="arrow">▼</span></button>
+    <div class="acc-body"><div class="acc-body-in">
+      أي المرتبط بأفعالهم من جهة طلبها أو التخيير فيها أو صحتها وفسادها. و«الأفعال» تشمل:
+      <ul>
+        <li>أعمال القلوب (كالإيمان والنية).</li>
+        <li>أعمال الجوارح (كالصلاة والحج).</li>
+        <li>سواء كانت إقداماً على الفعل أو كفاً عنه (كالصيام).</li>
+      </ul>
+      <b>استدراك المؤلف:</b> التعبير بلفظ «العباد» أولى من «المكلفين» ليشمل الأحكام المتعلقة بالصغير والمجنون (كوجوب الزكاة والنفقة وضمان المتلفات في مالهما) مع أنهما غير مكلفين.
+      <br><b>يخرج بالقيد:</b> الخطاب المتعلق بذات الله، أو بالجمادات والكون، أو القصص. قال العلماء: لذلك جميع آيات القرآن التي تُستنبط منها أحكام تتعلق بأفعال العباد (وحصروا آيات الأحكام في نحو ٥٠٠ آية).
+    </div></div>
+  </div>
+
+  <div class="acc">
+    <button class="acc-head"><span class="badge">٣</span> قولهم: «بالاقتضاء» — وهو الطلب، وأقسامه أربعة <span class="arrow">▼</span></button>
+    <div class="acc-body"><div class="acc-body-in">
+      <ul>
+        <li>طلب الفعل جازماً = <b>الإيجاب</b></li>
+        <li>طلب الفعل غير جازم = <b>الندب</b></li>
+        <li>طلب الترك جازماً = <b>التحريم</b></li>
+        <li>طلب الترك غير جازم = <b>الكراهة</b></li>
+      </ul>
+    </div></div>
+  </div>
+
+  <div class="acc">
+    <button class="acc-head"><span class="badge">٤</span> قولهم: «أو التخيير» <span class="arrow">▼</span></button>
+    <div class="acc-body"><div class="acc-body-in">
+      لإدخال <b>الإباحة</b> (تخيير المكلف بين الفعل والترك). وردّ المؤلف على من أسقط هذه الكلمة بزعم أن الإباحة حكم عقلي سابق للشرع (البراءة الأصلية)؛
+      بل الإباحة حكم شرعي تثبت بنص التخيير، أو بسكوت الشارع، أو بدليل استصحاب الحل.
+    </div></div>
+  </div>
+
+  <div class="acc">
+    <button class="acc-head"><span class="badge">٥</span> قولهم: «أو الوضع» <span class="arrow">▼</span></button>
+    <div class="acc-body"><div class="acc-body-in">
+      جعل الشيء: سبباً (كغروب الشمس للصلاة)، أو شرطاً (كالطهارة)، أو مانعاً (كالحيض)، أو صحيحاً أو فاسداً (كطهارة الجلد بالدباغ).
+    </div></div>
+  </div>
+
+  <!-- أقسام الحكم -->
+  <h3 style="font-family:'Reem Kufi';color:var(--green-700);margin:40px 0 20px">🗂️ أقسام الحكم الشرعي</h3>
+
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="t1">التقسيم الكلي عند الأصوليين</button>
+    <button class="tab-btn" data-tab="t2">تقسيم التكليفي عند الأصوليين (٦)</button>
+    <button class="tab-btn" data-tab="t3">تقسيم الفقهاء (٥ و ٧)</button>
+  </div>
+
+  <!-- تبويب 1 -->
+  <div class="tab-pane show" id="t1">
+    <div class="grid g3">
+      <div class="card" style="text-align:center;border-top:4px solid var(--green-600)">
+        <h4 style="font-family:'Reem Kufi'">١ — حكم تكليفي</h4>
+        <p style="font-size:.87rem;color:var(--muted)">يشمل الطلبية الأربعة فقط عند المؤلف، أو الخمسة عند الجمهور.</p></div>
+      <div class="card" style="text-align:center;border-top:4px solid var(--gold)">
+        <h4 style="font-family:'Reem Kufi'">٢ — حكم تخييري</h4>
+        <p style="font-size:.87rem;color:var(--muted)">وهو الإباحة؛ لأنها لا تتضمن إلزاماً وتكلفة (اختيار المؤلف والأول والقاضي).</p></div>
+      <div class="card" style="text-align:center;border-top:4px solid var(--green-800)">
+        <h4 style="font-family:'Reem Kufi'">٣ — حكم وضعي</h4>
+        <p style="font-size:.87rem;color:var(--muted)">السبب والشرط والمانع والصحة والفساد.</p></div>
+    </div>
+    <div class="vs-note" style="margin-top:18px">
+      <b>القول المشهور عند الجمهور:</b> ينقسم إلى قسمين فقط: حكم تكليفي (يشمل الخمسة) وحكم وضعي.
+      وبعضهم زعم أن الإباحة تكليف من جهة وجوب اعتقادها، وهو تكليف ظاهر.
+    </div>
+  </div>
+
+  <!-- تبويب 2 -->
+  <div class="tab-pane" id="t2">
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>الحكم</th><th>نوعه</th><th>التعريف الدقيق</th><th>المثال والدليل</th></tr></thead>
+        <tbody>
+          <tr><td><b>الإيجاب</b></td><td><span class="pill">تكليفي — طلب فعل</span></td>
+            <td>طلب الفعل جازماً مشعراً بالذم على الترك</td>
+            <td><span class="q">﴿أَقِمِ الصَّلَاةَ لِدُلُوكِ الشَّمْسِ﴾</span></td></tr>
+          <tr><td><b>الندب</b></td><td><span class="pill">تكليفي — طلب فعل</span></td>
+            <td>طلب الفعل مشعراً بعدم الذم على الترك</td>
+            <td><span class="q">﴿فَكَاتِبُوهُمْ إِنْ عَلِمْتُمْ فِيهِمْ خَيْرًا﴾</span> قُرن بما يدل على عدم الإلزام</td></tr>
+          <tr><td><b>التحريم</b></td><td><span class="pill">تكليفي — طلب ترك</span></td>
+            <td>طلب ترك الفعل جازماً مشعراً بالذم على الفعل</td>
+            <td><span class="q">﴿وَلَا تَقْرَبُوا الزِّنَا ۖ إِنَّهُ كَانَ فَاحِشَةً﴾</span></td></tr>
+          <tr><td><b>الكراهة</b></td><td><span class="pill">تكليفي — طلب ترك</span></td>
+            <td>طلب ترك الفعل مشعراً بعدم الذم على الفعل</td>
+            <td>قوله ﷺ: «لا يبولنَّ أحدكم في الماء الراكد» إرشاداً لعدم الضرر</td></tr>
+          <tr><td><b>الإباحة</b></td><td><span class="pill" style="background:var(--green-600);color:#fff">تخييري</span></td>
+            <td>التسوية بين الفعل والترك من غير مدح ولا ذم</td>
+            <td><span class="q">﴿أُحِلَّ لَكُمْ لَيْلَةَ الصِّيَامِ الرَّفَثُ إِلَىٰ نِسَائِكُمْ﴾</span></td></tr>
+          <tr><td><b>الحكم الوضعي</b></td><td><span class="pill gray">وضعي</span></td>
+            <td>خطاب الله بجعل الشيء سبباً أو شرطاً أو مانعاً صحيحاً أو فاسداً، ونصب العلامات والعلامات والشروط والموانع وأوصاف الصحة والبطلان</td>
+            <td>غروب الشمس سبب للصلاة، الطهارة شرط، الحيض مانع</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- تبويب 3 -->
+  <div class="tab-pane" id="t3">
+    <div class="grid g2">
+      <div>
+        <h4 style="color:var(--green-700);margin-bottom:12px">🕌 مذهب الجمهور (المالكية والشافعية والحنابلة) — ٥ أقسام</h4>
+        <div class="tbl-wrap">
+          <table style="min-width:auto">
+            <thead><tr><th>#</th><th>الحكم</th></tr></thead>
+            <tbody>
+              <tr><td>١</td><td><b>الفرض</b> (هو الواجب)</td></tr>
+              <tr><td>٢</td><td><b>المندوب</b></td></tr>
+              <tr><td>٣</td><td><b>المحرم</b></td></tr>
+              <tr><td>٤</td><td><b>المكروه</b></td></tr>
+              <tr><td>٥</td><td><b>المباح</b></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size:.85rem;color:var(--muted);margin-top:10px">يقسمونه باعتبار صفة فعل العبد.</p>
+      </div>
+      <div>
+        <h4 style="color:var(--green-700);margin-bottom:12px">📚 مذهب الحنفية — ٧ أقسام</h4>
+        <div class="tbl-wrap">
+          <table style="min-width:auto">
+            <thead><tr><th>#</th><th>الحكم</th><th>ضابطه</th></tr></thead>
+            <tbody>
+              <tr><td>١</td><td><b>الفرض</b></td><td>ما طُلب فعله جازماً بدليل قطعي (كالقرآن والمتواتر)</td></tr>
+              <tr><td>٢</td><td><b>الواجب</b></td><td>ما طُلب فعله جازماً بدليل ظني (كخبر الآحاد)</td></tr>
+              <tr><td>٣</td><td><b>المندوب</b></td><td>ما طُلب فعله غير جازم</td></tr>
+              <tr><td>٤</td><td><b>المحرم</b></td><td>ما طُلب تركه جازماً بدليل قطعي</td></tr>
+              <tr><td>٥</td><td><b>المكروه كراهة تحريم</b></td><td>ما طُلب تركه جازماً بدليل ظني</td></tr>
+              <tr><td>٦</td><td><b>المكروه كراهة تنزيه</b></td><td>ما طُلب تركه غير جازم (وهو المكروه عند الجمهور)</td></tr>
+              <tr><td>٧</td><td><b>المباح</b></td><td>ما خُيّر المكلف بين فعله وتركه</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size:.85rem;color:var(--muted);margin-top:10px">بنوا تفريقهم بين الفرض والواجب، وبين نوعي الكراهة، على الفرق بين الدليل القطعي والدليل الظني.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== الاختبار ==================== -->
+<section id="quiz" class="reveal">
+  <div class="sec-head">
+    <div class="orn">✦ ✦ ✦</div>
+    <h2>اختبر نفسك ✍️</h2>
+    <div class="sub">ستة أسئلة سريعة من محتوى الملخص</div>
+    <div class="line"></div>
+  </div>
+
+  <div class="quiz-box">
+    <div id="quizMain">
+      <div class="quiz-q" id="qText"></div>
+      <div class="quiz-opts" id="qOpts"></div>
+      <div class="quiz-foot">
+        <div class="quiz-progress"><span id="qBar"></span></div>
+        <button class="btn" id="qNext" style="display:none">السؤال التالي ←</button>
+      </div>
+    </div>
+    <div class="quiz-result" id="quizResult">
+      <div style="font-size:3rem">🏅</div>
+      <div class="score" id="scoreTxt"></div>
+      <p id="scoreMsg" style="color:var(--muted);margin-bottom:16px"></p>
+      <button class="btn" onclick="startQuiz()">🔄 إعادة المحاولة</button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="f-title">ملخص كتاب «أصول الفقه الذي لا يسع الفقيه جهله»</div>
+  <div>تأليف: أ. د. عياض بن نامي السلمي — تلخيص الصفحات من ٥ إلى ٣٧</div>
+  <small style="display:block;margin-top:10px">صفحة تعليمية تفاعلية أُعدت لأغراض المراجعة العلمية ✦</small>
+</footer>
+
+<button id="toTop" title="العودة للأعلى">↑</button>
+
+<script>
+/* ============ شريط التقدم وزر الصعود ============ */
+const progress=document.getElementById('progress'),toTop=document.getElementById('toTop');
+addEventListener('scroll',()=>{
+  const h=document.documentElement;
+  progress.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+  toTop.classList.toggle('show',h.scrollTop>500);
+  spy();
+});
+toTop.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+
+/* ============ الوضع الليلي ============ */
+const themeBtn=document.getElementById('themeBtn');
+try{if(localStorage.getItem('theme')==='dark'){document.body.classList.add('dark');themeBtn.textContent='☀'}}catch(e){}
+themeBtn.onclick=()=>{
+  document.body.classList.toggle('dark');
+  const dark=document.body.classList.contains('dark');
+  themeBtn.textContent=dark?'☀':'☾';
+  try{localStorage.setItem('theme',dark?'dark':'light')}catch(e){}
+};
+
+/* ============ الظهور عند التمرير ============ */
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting)e.target.classList.add('visible');
+}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* ============ تتبع القسم النشط في القائمة ============ */
+const links=[...document.querySelectorAll('nav .links a')];
+const secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+function spy(){
+  let cur=0;
+  secs.forEach((s,i)=>{if(s&&scrollY>=s.offsetTop-120)cur=i});
+  links.forEach((a,i)=>a.classList.toggle('active',i===cur));
+}
+
+/* ============ الأكورديون ============ */
+document.querySelectorAll('.acc-head').forEach(b=>{
+  b.addEventListener('click',()=>{
+    const acc=b.parentElement,body=acc.querySelector('.acc-body');
+    const open=acc.classList.contains('open');
+    document.querySelectorAll('.acc.open').forEach(o=>{
+      o.classList.remove('open');o.querySelector('.acc-body').style.maxHeight=null;
+    });
+    if(!open){acc.classList.add('open');body.style.maxHeight=body.scrollHeight+'px'}
+  });
+});
+
+/* ============ بطاقات القلب ============ */
+document.querySelectorAll('.flip').forEach(f=>f.addEventListener('click',()=>f.classList.toggle('flipped')));
+
+/* ============ التبويبات ============ */
+document.querySelectorAll('.tab-btn').forEach(b=>{
+  b.addEventListener('click',()=>{
+    const group=b.closest('section');
+    group.querySelectorAll('.tab-btn').forEach(x=>x.classList.remove('active'));
+    group.querySelectorAll('.tab-pane').forEach(x=>x.classList.remove('show'));
+    b.classList.add('active');
+    document.getElementById(b.dataset.tab).classList.add('show');
+  });
+});
+
+/* ============ الاختبار التفاعلي ============ */
+const quiz=[
+ {q:"من أول من دوّن علم أصول الفقه؟",o:["الإمام مالك","الإمام الشافعي","الإمام أحمد","داود الظاهري"],a:1},
+ {q:"ما معنى الفقه في اللغة؟",o:["استنباط الأحكام","حفظ المتون","فهم الأشياء الدقيقة","العمل بالعلم"],a:2},
+ {q:"كم أقسام الحكم التكليفي عند جمهور الفقهاء؟",o:["ثلاثة","أربعة","خمسة","سبعة"],a:2},
+ {q:"ما هو «الفرض» عند الحنفية؟",o:["ما طلب فعله بدليل ظني","ما طلب فعله جازماً بدليل قطعي","ما طلب تركه جازماً","ما خير المكلف فيه"],a:1},
+ {q:"الإباحة عند الأصوليين حكم…",o:["تكليفي","وضعي","تخييري","قطعي"],a:2},
+ {q:"قولهم «الأصل تقديم الخاص على العام» — ما معنى الأصل هنا؟",o:["الدليل","القاعدة المستمرة","الراجح","المقيس عليه"],a:1}
+];
+let qi=0,score=0,answered=false;
+const qText=document.getElementById('qText'),qOpts=document.getElementById('qOpts'),
+      qNext=document.getElementById('qNext'),qBar=document.getElementById('qBar');
+
+function startQuiz(){
+  qi=0;score=0;
+  document.getElementById('quizResult').style.display='none';
+  document.getElementById('quizMain').style.display='block';
+  renderQ();
+}
+function renderQ(){
+  answered=false;qNext.style.display='none';
+  const item=quiz[qi];
+  qText.textContent=`س${qi+1} / ${quiz.length}: ${item.q}`;
+  qBar.style.width=(qi/quiz.length*100)+'%';
+  qOpts.innerHTML='';
+  item.o.forEach((opt,i)=>{
+    const b=document.createElement('button');
+    b.className='quiz-opt';b.textContent=opt;
+    b.onclick=()=>{
+      if(answered)return;answered=true;
+      [...qOpts.children].forEach(x=>x.disabled=true);
+      if(i===item.a){b.classList.add('correct');score++}
+      else{b.classList.add('wrong');qOpts.children[item.a].classList.add('correct')}
+      qBar.style.width=((qi+1)/quiz.length*100)+'%';
+      qNext.style.display='inline-block';
+      qNext.textContent=(qi===quiz.length-1)?'عرض النتيجة 🏁':'السؤال التالي ←';
+    };
+    qOpts.appendChild(b);
+  });
+}
+qNext.onclick=()=>{
+  qi++;
+  if(qi<quiz.length)renderQ();
+  else{
+    document.getElementById('quizMain').style.display='none';
+    const r=document.getElementById('quizResult');r.style.display='block';
+    document.getElementById('scoreTxt').textContent=`${score} / ${quiz.length}`;
+    const msg=document.getElementById('scoreMsg');
+    if(score===quiz.length)msg.textContent="ممتاز! أتقنت الملخص بالكامل 🌟";
+    else if(score>=4)msg.textContent="جيد جداً! راجع النقاط التي أخطأت فيها 📖";
+    else msg.textContent="لا بأس، أعد قراءة الملخص وحاول مجدداً 💪";
+  }
+};
+startQuiz();
+</script>
+</body>
+</html>
